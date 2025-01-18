@@ -61,8 +61,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
                 </div>
 
             </div>
-            {/* MOBILE MENU MODAL */}
-            
+
         </nav>
     )
 }
