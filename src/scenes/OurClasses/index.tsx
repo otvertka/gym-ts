@@ -1,4 +1,4 @@
-import { ClassesType, SelectedPage } from "@/shared/types";
+import { IClassesInfo, SelectedPage } from "@/shared/types";
 import image1 from "@/assets/image1.png";
 import image2 from "@/assets/image2.png";
 import image3 from "@/assets/image3.png";
@@ -7,10 +7,10 @@ import image5 from "@/assets/image5.png";
 import image6 from "@/assets/image6.png";
 import { motion } from "framer-motion";
 import HText from "@/shared/HText";
-import Classes from "./Classes";
+import ClassCard from "./ClassCard";
 
 
-const classes: Array<ClassesType> = [
+const classList: Array<IClassesInfo> = [
     {
         name: "Pilates Classes",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cum qui dolores iste earum fugit",
@@ -43,11 +43,11 @@ const classes: Array<ClassesType> = [
     },
 ]
 
-type Props = {
+type OurClassesProps = {
     setSelectedPage: (value: SelectedPage) => void;
 }
 
-const OurClasses = ({ setSelectedPage }: Props) => {
+const OurClasses = ({ setSelectedPage }: OurClassesProps) => {
     return (
         <section id="ourclasses" className="w-full bg-primary-100 py-40">
             <motion.div
@@ -73,8 +73,8 @@ const OurClasses = ({ setSelectedPage }: Props) => {
                 </motion.div>
                 <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
                     <ul className="w-[2800px] whitespace-nowrap">
-                        {classes.map((item: ClassesType, index) => (
-                            <Classes
+                        {classList.map((item: IClassesInfo, index) => (
+                            <ClassCard
                                 key={`${item.name}-${index}`}
                                 name={item.name}
                                 description={item.description}
