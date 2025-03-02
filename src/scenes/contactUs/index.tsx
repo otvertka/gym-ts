@@ -3,7 +3,7 @@ import { SelectedPage } from "@/shared/types";
 import { motion } from 'framer-motion';
 import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
 import HText from "@/shared/HText";
-import { p } from "framer-motion/client";
+
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
@@ -21,8 +21,6 @@ const ContactUs = ({ setSelectedPage }: Props) => {
     return (
         <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
             <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}>
-                {/* HEADER */}
-
                 <motion.div
                     className="md:-mt-20"
                     initial="hidden"
@@ -42,7 +40,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                         Ullamcorper arcu id pretium sapien proin integer nisl. Felis orci diam odio.
                     </p>
                 </motion.div>
-                {/* FORM & IMAGE */}
+
                 <div className="mt-10 justify-between gap-8 md:flex">
                     <motion.div
                         className="mt-10 basis-3/5 md:mt-0"
